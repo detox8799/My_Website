@@ -1,0 +1,19 @@
+{% extends "zola-grayscale/templates/index.html" %}
+
+{% block masthead_button %} {% endblock masthead_button %}
+{% block masthead_title %}Nick Koerber{% endblock masthead_title %}
+{% block masthead_description %}{% endblock masthead_description %}
+
+{% block contact_contact %} {% endblock contact_contact %}
+{% block navigation %} {% endblock navigation %}
+{% block projects %} {% endblock projects %}
+{% block signup %} {% endblock signup %}
+{% block about %} {% endblock about %}
+
+{% block contact_social %}
+    <div class="social d-flex justify-content-center">
+        {% for item in contact.social %}
+            <a class="mx-2" href="{{ item.url | safe }}"><i class="{{ item.icon }} fa-xl" aria-hidden="true"></i></a>
+        {% endfor %}
+    </div>
+{% endblock contact_social %}
